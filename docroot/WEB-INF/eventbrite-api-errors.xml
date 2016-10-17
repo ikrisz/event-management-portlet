@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="
+           	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"           
+    default-lazy-init="false">
+
+
+	<util:map id="eventbriteErrorMap">
+			<entry key="Request Error" value-ref="requestError" />
+			<entry key="Authentication Failed" value-ref="authenticationFailed" />
+			<entry key="Application Key Error" value-ref="applicationKeyError" />
+	</util:map>
+	
+	
+	<!-- Request Error -->
+   <util:list id="requestError" scope="singleton" >
+		<bean class="com.pfiks.intelligus.events.service.impl.eventbrite.EventbriteError">
+			<property name="errorMessage" value="Not a valid API command" />
+			<property name="errorLabel" value="api.error"/>
+		</bean>
+	</util:list>
+	
+   <!-- Authentication Error -->
+   <util:list id="authenticationFailed" scope="singleton" >
+		<bean class="com.pfiks.intelligus.events.service.impl.eventbrite.EventbriteError">
+			<property name="errorMessage" value="Invalid user_key" />
+			<property name="errorLabel" value="authentication.user.failed"/>
+		</bean>
+	</util:list>
+	
+	
+	 <!-- Application key Error -->
+   <util:list id="applicationKeyError" scope="singleton" >
+		<bean class="com.pfiks.intelligus.events.service.impl.eventbrite.EventbriteError">
+			<property name="errorMessage" value="This application key is not valid" />
+			<property name="errorLabel" value="authentication.application.failed"/>
+		</bean>
+	</util:list>
+	
+</beans>

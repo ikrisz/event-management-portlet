@@ -1,0 +1,42 @@
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"> 
+	<tlib-version>1.0</tlib-version>
+	<short-name>utils</short-name>
+	<uri>eventUtilsTag</uri>
+
+	<function>
+		<name>getFullVenueLocation</name>
+		<function-class>com.pfiks.intelligus.events.utils.TaglibUtils</function-class>
+		<function-signature>java.lang.String getFullVenueLocation(com.pfiks.intelligus.events.model.event.EventModel, com.liferay.portal.theme.ThemeDisplay)</function-signature>
+	</function>
+	
+	<function>
+		<name>getShortVenueLocation</name>
+		<function-class>com.pfiks.intelligus.events.utils.TaglibUtils</function-class>
+		<function-signature>java.lang.String getShortVenueLocation(com.pfiks.intelligus.events.model.event.EventModel, com.liferay.portal.theme.ThemeDisplay)</function-signature>
+	</function>
+	
+	<function>
+		<name>getGoogleMapAddress</name>
+		<function-class>com.pfiks.intelligus.events.utils.TaglibUtils</function-class>
+		<function-signature>java.lang.String getGoogleMapAddress(com.pfiks.intelligus.events.model.event.EventModel)</function-signature>
+	</function>
+	
+	<function>
+		<name>isDaySelectedAsRecurrence</name>
+		<function-class>com.pfiks.intelligus.events.utils.TaglibUtils</function-class>
+		<function-signature>java.lang.Boolean isDaySelectedAsRecurrence(com.pfiks.intelligus.events.model.event.EventModel, java.lang.Integer)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAttendeePortraitUrl</name>
+		<function-class>com.pfiks.intelligus.events.utils.TaglibUtils</function-class>
+		<function-signature>java.lang.String getAttendeePortraitUrl(com.pfiks.intelligus.events.model.event.EventAttendee, com.liferay.portal.theme.ThemeDisplay)</function-signature>
+	</function>
+	
+	<function>
+		<name>getCurrencySymbol</name>
+		<function-class>com.pfiks.intelligus.events.utils.TaglibUtils</function-class>
+		<function-signature>java.lang.String getCurrencySymbol(com.pfiks.intelligus.events.model.event.EventbriteDetails)</function-signature>
+	</function>
+	
+</taglib> 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<dynamic-element instance-id="1T71mL01" name="subject" type="text" index-type="not-searchable">
+		<dynamic-content><![CDATA[Message for you on [$PORTAL_NAME$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="1T71mL02" name="content" type="text_area" index-type="not-searchable">
+		<dynamic-content>
+			<![CDATA[
+				<table style="border:1px solid #dedede;border-radius: 10px;padding-top:0px;padding-bottom:10px" border="0" cellpadding="0" cellspacing="0" width="560">
+					<thead>
+			            <tr>
+			                <td>&nbsp;</td>
+			            </tr>
+       				</thead>
+
+        			<tbody>
+						<tr>
+	                        <td width="29"></td>
+					        <td style="color:#515151" width="500">
+					            <div style="padding: 5px;">
+					                <p style="font-size:17px;line-height:21px">
+					                    <strong style="display:inline">
+					                        <span style="color:#515151">Hello,</span>
+					                    </strong>
+					                    <br>
+					                    <span style="font-size:13px;font-weight:400px;line-height:18px;margin-top:0;color:#515151">
+					                         [$SENDER_USER_FULLNAME$] sent you a message on [$PORTAL_NAME$]
+					                    </span>
+					                </p>
+					
+					                <p style="font-size:17px;line-height:21px">
+					                    <span style="font-size:13px;font-weight:400px;line-height:18px;margin-top:0;color:#515151">
+					                      [$MESSAGE_CONTENT$]
+					                    </span>
+					                </p>
+					                
+					                <p style="font-size:17px;line-height:21px">
+					                    <span style="font-size:13px;font-weight:400px;line-height:18px;margin-top:0;color:#515151">
+					                       Reply to the user at <a href="mailto:[$SENDER_USER_EMAIL$]">[$SENDER_USER_EMAIL$]</a>
+					                    </span>
+					                </p>
+					            </div>
+							</td>
+					        <td width="29"></td>
+				    	</tr>
+					</tbody>
+				</table>
+			]]>
+		</dynamic-content>
+	</dynamic-element>
+</root>

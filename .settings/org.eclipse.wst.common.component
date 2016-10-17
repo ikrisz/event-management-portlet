@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="events-management-portlet">
+        <wb-resource deploy-path="/" source-path="/docroot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/docroot/WEB-INF/src"/>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="search-hook-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/search-hook/docroot/WEB-INF/lib/search-hook-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="networks-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/networks-portlet/docroot/WEB-INF/lib/networks-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="intelligus-hook-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/intelligus-hook/docroot/WEB-INF/lib/intelligus-hook-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="events-management-portlet"/>
+        <property name="java-output-path" value="/events-management-portlet/docroot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

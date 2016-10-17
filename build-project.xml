@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="events-management-portlet-project" basedir="." default="all-client-project">
+	
+	<property file="project.properties" />
+	<property file="../../project.properties" />
+	<property name="client.folder" value="client-configs/${customer}/${customer.project}"/>
+
+	<import file="${build.project.dir}/build-common-plugin-project.xml" />
+	
+	
+	<!-- Deploy portlet including custom configurations -->
+	
+	<target name="all-client-project">
+
+		<antcall target="build-project-properties">
+			<param name="portlet.project.dir">${basedir}</param>
+		</antcall>
+
+		<ant antfile="build.xml" target="all"/>
+	</target>
+	
+</project>

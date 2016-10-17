@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:task="http://www.springframework.org/schema/task"
+    xsi:schemaLocation="
+           	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          	http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop.xsd
+          	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+	        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"           
+    default-lazy-init="false">
+
+    <context:component-scan base-package="com.pfiks.intelligus.events" />
+    <context:annotation-config />
+    
+    <task:annotation-driven />
+    
+    <import resource="eventbrite-api-errors.xml"/>
+    
+	<bean id="eventbriteApis" class="com.pfiks.intelligus.events.service.impl.eventbrite.HttpRequestUtil" >
+		<property name="eventbriteErrorMap" ref="eventbriteErrorMap" />
+	</bean>
+	
+	<bean id="eventbriteImport" class="com.pfiks.intelligus.events.task.EventBriteImport" />
+    <task:scheduled-tasks>
+        <task:scheduled ref="eventbriteImport" method="importEventBriteEvents" cron="0 0 23 * * ?"/>
+    </task:scheduled-tasks>
+ 	 
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="order" value="1" />
+        <property name="cache" value="false"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/html/"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="contentType" value="text/html;charset=utf-8" />
+    </bean>
+    
+    <bean id="eventsExceptionHandler" class="com.pfiks.intelligus.events.controller.EventsExceptionResolver"/>
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	  <property name="mappedHandlers">
+			<set>
+				<ref bean="eventsExceptionHandler" />
+			</set>
+		</property>
+	  <property name="defaultErrorView" value="error/exception_error" />
+	</bean>
+</beans>
