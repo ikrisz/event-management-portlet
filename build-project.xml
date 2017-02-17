@@ -3,10 +3,10 @@
 
 <project name="events-management-portlet-project" basedir="." default="all-client-project">
 	
+	<property name="client.folder" value="client-configs/${customer}/${customer.project}"/>
 	<property file="project.properties" />
 	<property file="../../project.properties" />
-	<property name="client.folder" value="client-configs/${customer}/${customer.project}"/>
-
+	
 	<import file="${build.project.dir}/build-common-plugin-project.xml" />
 	
 	
