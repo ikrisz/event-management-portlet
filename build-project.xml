@@ -6,6 +6,8 @@
 	
 	<property file="project.properties" />
 	<property file="../../project.properties" />
+	
+	
 	<property name="client.folder" value="client-configs/${customer}/${customer.project}"/>
 	
 	
