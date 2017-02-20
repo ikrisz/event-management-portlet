@@ -14,7 +14,7 @@
 	<import file="${build.project.dir}/build-common-plugin-project.xml" />
 	
 	
-	<!-- Deploy portlet including custom configurations -->
+	<!-- Deploy portlet including custom configurations 
 	
 	<target name="all-client-project">
 
@@ -23,6 +23,15 @@
 		</antcall>
 
 		<ant antfile="build.xml" target="all"/>
-	</target>
+	</target> -->
+	
+	<target name="all-client-project">
+
+			<antcall target="build-project-properties">
+				<param name="portlet.project.dir">${basedir}</param>
+			</antcall>
+
+			<ant antfile="build.xml" target="all"/>
+		</target>
 	
 </project>
